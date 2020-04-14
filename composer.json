@@ -1,0 +1,52 @@
+{
+    "name"       : "sdwru/awx-v2",
+    "type"       : "library",
+    "description": "AWX API v2 PHP 5.4+ library",
+    "keywords"   : ["AWX", "Tower", "Ansible", "API"],
+    "homepage"   : "https://github.com/sdwru/awx-v2",
+    "license"    : "MIT",
+
+    "authors": [
+        {
+            "name"    : "sdwru",
+            "role"    : "Developer"
+        }
+    ],
+
+    "support": {
+        "issues": "https://github.com/sdwru/awx-v2/issues",
+        "source": "https://github.com/sdwru/awx-v2"
+    },
+
+    "require": {
+        "php": "^7.1.0",
+        "ext-json": "*"
+    },
+
+    "require-dev": {
+        "kriswallsmith/buzz": "^0.16",
+        "guzzlehttp/guzzle": "^5.3|^6.3",
+        "phpspec/phpspec": "^2.5"
+    },
+
+    "suggest": {
+        "kriswallsmith/buzz": "To use BuzzAdapter, require kriswallsmith/buzz:^0.16.",
+        "guzzlehttp/guzzle" : "To use GuzzleHttpAdapter, require guzzlehttp/guzzle:^5.3|^6.3."
+    },
+
+    "autoload": {
+        "psr-4": {
+            "AwxV2\\": "src/"
+        }
+    },
+
+    "config": {
+        "preferred-install": "dist"
+    },
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.3-dev"
+        }
+    }
+}
