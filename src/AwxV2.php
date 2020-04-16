@@ -20,6 +20,7 @@ use AwxV2\Api\DomainRecord;
 use AwxV2\Api\Droplet;
 use AwxV2\Api\FloatingIp;
 use AwxV2\Api\Image;
+use AwxV2\Api\Job;
 use AwxV2\Api\Key;
 use AwxV2\Api\LoadBalancer;
 use AwxV2\Api\RateLimit;
@@ -116,6 +117,14 @@ class AwxV2
     public function image()
     {
         return new Image($this->adapter, $this->url);
+    }
+    
+    /**
+     * @return Job
+     */
+    public function job()
+    {
+        return new Job($this->adapter, $this->url);
     }
 
     /**
