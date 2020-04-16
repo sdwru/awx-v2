@@ -48,7 +48,7 @@ class Job extends AbstractApi
      */
     public function getById($id)
     {
-        $var = $this->adapter->get(sprintf('%s/domains/%s', $this->endpoint, $id));
+        $var = $this->adapter->get(sprintf('%s/domains/%s/', $this->endpoint, $id));
 
         $var = json_decode($var);
 
