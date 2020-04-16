@@ -40,19 +40,19 @@ class Job extends AbstractApi
     }
 
     /**
-     * @param string $domainName
+     * @param int $id
      *
      * @throws HttpException
      *
-     * @return DomainEntity
+     * @return JobEntity
      */
-    public function getByName($domainName)
+    public function getById($id)
     {
-        $domain = $this->adapter->get(sprintf('%s/domains/%s', $this->endpoint, $domainName));
+        $var = $this->adapter->get(sprintf('%s/domains/%s', $this->endpoint, $id));
 
-        $domain = json_decode($domain);
+        $var = json_decode($var);
 
-        return new DomainEntity($domain->domain);
+        return new JobEntity($var->results);
     }
 
     /**
