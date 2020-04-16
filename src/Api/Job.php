@@ -28,15 +28,15 @@ class User extends AbstractApi
      */
     public function getAll($per_page = 200, $page = 1)
     {
-        $users = $this->adapter->get(sprintf('%s/users/?page_size=%d&page=%d', $this->endpoint, $per_page, $page));
+        $vars = $this->adapter->get(sprintf('%s/jobs/?page_size=%d&page=%d', $this->endpoint, $per_page, $page));
 
-        $users = json_decode($users);
+        $vars = json_decode($vars);
 
-        $this->extractMeta($users);
+        $this->extractMeta($vars);
 
-        return array_map(function ($user) {
-            return new UserEntity($user);
-        }, $users->results);
+        return array_map(function ($vars) {
+            return new JobEntity($var);
+        }, $vars->results);
     }
 
     /**
