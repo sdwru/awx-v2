@@ -11,7 +11,7 @@
 
 namespace AwxV2\Api;
 
-use AwxV2\Entity\User as UserEntity;
+use AwxV2\Entity\Job as JobEntity;
 use AwxV2\Exception\HttpException;
 
 /**
