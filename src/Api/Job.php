@@ -48,7 +48,7 @@ class Job extends AbstractApi
      */
     public function getById($id)
     {
-        $var = $this->adapter->get(sprintf('%s/domains/%s/', $this->endpoint, $id));
+        $var = $this->adapter->get(sprintf('%s/jobs/%s/', $this->endpoint, $id));
 
         $var = json_decode($var);
 
@@ -67,7 +67,7 @@ class Job extends AbstractApi
     {
         $content = ['name' => $name, 'ip_address' => $ipAddress];
 
-        $domain = $this->adapter->post(sprintf('%s/domains', $this->endpoint), $content);
+        $domain = $this->adapter->post(sprintf('%s/jobs/', $this->endpoint), $content);
 
         $domain = json_decode($domain);
 
@@ -79,8 +79,8 @@ class Job extends AbstractApi
      *
      * @throws HttpException
      */
-    public function delete($domain)
+    public function delete($var)
     {
-        $this->adapter->delete(sprintf('%s/domains/%s', $this->endpoint, $domain));
+        $this->adapter->delete(sprintf('%s/jobs/%s', $this->endpoint, $var));
     }
 }
