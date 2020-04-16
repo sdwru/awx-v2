@@ -18,7 +18,7 @@ use AwxV2\Exception\HttpException;
  * @author Yassir Hannoun <yassir.hannoun@gmail.com>
  * @author Graham Campbell <graham@alt-three.com>
  */
-class User extends AbstractApi
+class Job extends AbstractApi
 {
     /**
      * @param int $per_page
