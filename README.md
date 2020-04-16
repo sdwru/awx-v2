@@ -12,7 +12,7 @@ https://github.com/toin0u/DigitalOceanV2
 Installation
 ------------
 
-If installing on Laravel use the install instructions at https://github.com/sdwru/Laravel-AwxV2. This library depends on oauth2-awx for obtaining tokens.  That package uses it's own instance of guzzlehttp independently of what this package does for the http client.  Some day we may decide to merge the two packages.
+If installing on Laravel use the install instructions at https://github.com/sdwru/Laravel-AwxV2. This library depends on oauth2-awx for obtaining tokens.  That package is based on a separate project and uses it's own instance of guzzlehttp independent of what this package does for the http client.
 
 You can install the bindings via Composer. If installing standalone to some generic php framework add the following to your composer.json
 ```
