@@ -67,11 +67,11 @@ class Job extends AbstractApi
     {
         $content = ['name' => $name, 'ip_address' => $ipAddress];
 
-        $domain = $this->adapter->post(sprintf('%s/jobs/', $this->endpoint), $content);
+        $var = $this->adapter->post(sprintf('%s/jobs/', $this->endpoint), $content);
 
-        $domain = json_decode($domain);
+        $var = json_decode($var);
 
-        return new DomainEntity($domain->domain);
+        return new JobEntity($var->results);
     }
 
     /**
