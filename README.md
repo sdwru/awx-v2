@@ -60,19 +60,6 @@ Using password grant requires that AWX be configured with an AWX user consisting
 
 Add the above 4 pieces of information somewhere in your PHP application that is not tracked by your version control system.  In Laravel that file is typically `.env`.  Once you have added the information you can create a bearer token and refresh token using the following example code.
 
-Adapter
--------
-
-We provide a simple `BuzzAdapter`  which (at the moment) can be tweaked by injecting your own `Browser`
-and `ListenerInterface`. By default a `Curl` client will be injected in `Browser` and the `BuzzOAuthListener`
-will be used.
-
-To wrap your own response message, please inject your own `ExceptionInterface` if needed (see `AwxV2\Exception\ResponseException` for more info).
-
-If you use Guzzle, you can inject your own client to our `GuzzleAdapter`.
-
-You can also build your own adapter by extending `AbstractAdapter` and implementing `AdapterInterface`.
-
 Example
 -------
 
