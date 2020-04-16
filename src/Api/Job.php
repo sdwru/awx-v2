@@ -52,7 +52,7 @@ class Job extends AbstractApi
 
         $var = json_decode($var);
 
-        return new JobEntity($var->results);
+        return new JobEntity($var);
     }
 
     /**
