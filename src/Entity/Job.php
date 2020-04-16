@@ -15,7 +15,7 @@ namespace AwxV2\Entity;
  * @author Yassir Hannoun <yassir.hannoun@gmail.com>
  * @author Graham Campbell <graham@alt-three.com>
  */
-final class User extends AbstractEntity
+final class Job extends AbstractEntity
 {
     /**
      * @var int
