@@ -12,7 +12,6 @@
 namespace AwxV2\Api;
 
 use AwxV2\Adapter\AdapterInterface;
-use AwxV2\Entity\Meta;
 
 /**
  * @author Antoine Corcy <contact@sbin.dk>
@@ -31,11 +30,6 @@ abstract class AbstractApi
     protected $endpoint;
 
     /**
-     * @var Meta
-     */
-    protected $meta;
-
-    /**
      * @param AdapterInterface $adapter
      * @param string|null      $endpoint
      */
@@ -43,27 +37,5 @@ abstract class AbstractApi
     {
         $this->adapter = $adapter;
         $this->endpoint = $baseEndpoint . '/v2';
-    }
-
-    /**
-     * @param \stdClass $data
-     *
-     * @return Meta|null
-     */
-    protected function extractMeta(\StdClass $data)
-    {
-        if (isset($data->meta)) {
-            $this->meta = new Meta($data->meta);
-        }
-
-        return $this->meta;
-    }
-
-    /**
-     * @return Meta|null
-     */
-    public function getMeta()
-    {
-        return $this->meta;
     }
 }
