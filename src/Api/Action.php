@@ -28,8 +28,6 @@ class Action extends AbstractApi
 
         $actions = json_decode($actions);
 
-        $this->extractMeta($actions);
-
         return array_map(function ($action) {
             return new ActionEntity($action);
         }, $actions->actions);
