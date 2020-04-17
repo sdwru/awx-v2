@@ -3,7 +3,7 @@
 /*
  * This file is part of the AwxV2 library.
  *
- * (c) Antoine Corcy <contact@sbin.dk>
+ * (c) Sdwru https://github.com/sdwru
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -15,8 +15,8 @@ use AwxV2\Entity\Job as JobEntity;
 use AwxV2\Exception\HttpException;
 
 /**
- * @author Yassir Hannoun <yassir.hannoun@gmail.com>
- * @author Graham Campbell <graham@alt-three.com>
+ *
+ *
  */
 class Job extends AbstractApi
 {
