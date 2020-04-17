@@ -32,8 +32,6 @@ class Job extends AbstractApi
 
         $vars = json_decode($vars);
 
-        $this->extractMeta($vars);
-
         return array_map(function ($var) {
             return new JobEntity($var);
         }, $vars->results);
