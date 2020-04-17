@@ -11,7 +11,7 @@
 
 namespace AwxV2\Api;
 
-use AwxV2\Entity\Job as JobEntity;
+use AwxV2\Entity\Setting as SettingEntity;
 use AwxV2\Exception\HttpException;
 
 /**
@@ -24,7 +24,7 @@ class Setting extends AbstractApi
      * @param int $per_page
      * @param int $page
      *
-     * @return DomainEntity[]
+     * @return SettingEntity[]
      */
     public function getAll($per_page = 200, $page = 1)
     {
@@ -42,7 +42,7 @@ class Setting extends AbstractApi
      *
      * @throws HttpException
      *
-     * @return JobEntity
+     * @return SettingEntity
      */
     public function getByName($name)
     {
