@@ -32,8 +32,6 @@ class Credential extends AbstractApi
 
         $vars = json_decode($vars);
 
-        $this->extractMeta($vars);
-
         return array_map(function ($var) {
             return new CredentialEntity($var);
         }, $vars->results);
