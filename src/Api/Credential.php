@@ -3,7 +3,7 @@
 /*
  * This file is part of the AwxV2 library.
  *
- * (c) Antoine Corcy <contact@sbin.dk>
+ * (c) Sdwru https://github.com/sdwru
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,7 +11,7 @@
 
 namespace AwxV2\Api;
 
-use AwxV2\Entity\Job as JobEntity;
+use AwxV2\Entity\Credential as CredentialEntity;
 use AwxV2\Exception\HttpException;
 
 /**
@@ -46,7 +46,7 @@ class Credential extends AbstractApi
      */
     public function getById($id)
     {
-        $var = $this->adapter->get(sprintf('%s/jobs/%s/', $this->endpoint, $id));
+        $var = $this->adapter->get(sprintf('%s/credentials/%s/', $this->endpoint, $id));
 
         $var = json_decode($var);
 
