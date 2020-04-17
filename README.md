@@ -32,10 +32,8 @@ To use the bindings, use Composer's autoload:
 require_once('vendor/autoload.php');
 ```
 
-You then need to install **one** of the following:
+You then need to install guzzle:
 ```bash
-$ php composer.phar require kriswallsmith/buzz:^0.16
-$ php composer.phar require guzzlehttp/guzzle:^5.3
 $ php composer.phar require guzzlehttp/guzzle:^6.3
 ```
 
