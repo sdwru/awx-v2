@@ -32,8 +32,6 @@ class User extends AbstractApi
 
         $users = json_decode($users);
 
-        $this->extractMeta($users);
-
         return array_map(function ($user) {
             return new UserEntity($user);
         }, $users->results);
