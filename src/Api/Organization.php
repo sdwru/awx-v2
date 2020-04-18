@@ -18,7 +18,7 @@ use AwxV2\Exception\HttpException;
  *
  *
  */
-class Oganization extends AbstractApi
+class Organization extends AbstractApi
 {
     /**
      * @param int $per_page
