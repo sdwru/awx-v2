@@ -36,4 +36,18 @@ class Me extends AbstractApi
             return new MeEntity($var);
         }, $vars->results);
     }
+    
+    /**
+     * @param int $id
+     *
+     * @return MeEntity
+     */
+    public function getById($id)
+    {
+        $var = $this->adapter->get(sprintf('%s/me/%d', $this->endpoint, $id));
+
+        $var = json_decode($var);
+
+        return new MeEntity($var);
+    }
 }
