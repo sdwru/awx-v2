@@ -16,6 +16,7 @@ use AwxV2\Api\Credential;
 use AwxV2\Api\Config;
 use AwxV2\Api\Job;
 use AwxV2\Api\Me;
+use AwxV2\Api\Organization;
 use AwxV2\Api\Setting;
 use AwxV2\Api\User;
 
@@ -74,6 +75,14 @@ class AwxV2
     public function me()
     {
         return new Me($this->adapter, $this->url);
+    }
+    
+    /**
+     * @return me
+     */
+    public function organization()
+    {
+        return new Organization($this->adapter, $this->url);
     }
     
     /**
