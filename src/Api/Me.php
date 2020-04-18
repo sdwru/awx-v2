@@ -44,7 +44,7 @@ class Me extends AbstractApi
      */
     public function getById($id)
     {
-        $var = $this->adapter->get(sprintf('%s/me/%d', $this->endpoint, $id));
+        $var = $this->adapter->get(sprintf('%s/me/%d/', $this->endpoint, $id));
 
         $var = json_decode($var);
 
