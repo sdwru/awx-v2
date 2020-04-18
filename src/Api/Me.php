@@ -28,10 +28,10 @@ class Me extends AbstractApi
      */
     public function get()
     {
-        $vars = $this->adapter->get(sprintf('%s/me/', $this->endpoint));
+        $var = $this->adapter->get(sprintf('%s/me/', $this->endpoint));
 
-        $vars = json_decode($vars);
+        $var = json_decode($var);
 
-        return new MeEntity($vars);
+        return new MeEntity($var);
     }
 }
