@@ -12,23 +12,12 @@
 namespace AwxV2;
 
 use AwxV2\Adapter\AdapterInterface;
-use AwxV2\Api\Account;
-use AwxV2\Api\Action;
-use AwxV2\Api\Certificate;
-use AwxV2\Api\Domain;
-use AwxV2\Api\DomainRecord;
-use AwxV2\Api\Droplet;
-use AwxV2\Api\FloatingIp;
-use AwxV2\Api\Image;
+use AwxV2\Api\Credential;
+use AwxV2\Api\Config;
 use AwxV2\Api\Job;
-use AwxV2\Api\Key;
-use AwxV2\Api\LoadBalancer;
-use AwxV2\Api\RateLimit;
-use AwxV2\Api\Region;
-use AwxV2\Api\Size;
-use AwxV2\Api\Snapshot;
+use AwxV2\Api\Me;
+use AwxV2\Api\Setting;
 use AwxV2\Api\User;
-use AwxV2\Api\Volume;
 
 /**
  * @author Antoine Corcy <contact@sbin.dk>
@@ -56,69 +45,21 @@ class AwxV2
     }
 
     /**
-     * @return Account
+     * @return config
      */
-    public function account()
+    public function config()
     {
-        return new Account($this->adapter, $this->url);
-    }
-
-    /**
-     * @return Action
-     */
-    public function action()
-    {
-        return new Action($this->adapter, $this->url);
-    }
-
-    /**
-     * @return Certificate
-     */
-    public function certificate()
-    {
-        return new Certificate($this->adapter, $this->url);
-    }
-
-    /**
-     * @return Domain
-     */
-    public function domain()
-    {
-        return new Domain($this->adapter, $this->url);
-    }
-
-    /**
-     * @return DomainRecord
-     */
-    public function domainRecord()
-    {
-        return new DomainRecord($this->adapter, $this->url);
-    }
-
-    /**
-     * @return Droplet
-     */
-    public function droplet()
-    {
-        return new Droplet($this->adapter, $this->url);
-    }
-
-    /**
-     * @return FloatingIp
-     */
-    public function floatingIp()
-    {
-        return new FloatingIp($this->adapter, $this->url);
-    }
-
-    /**
-     * @return Image
-     */
-    public function image()
-    {
-        return new Image($this->adapter, $this->url);
+        return new Config($this->adapter, $this->url);
     }
     
+    /**
+     * @return credential
+     */
+    public function credential()
+    {
+        return new Credential($this->adapter, $this->url);
+    }
+
     /**
      * @return Job
      */
@@ -126,45 +67,21 @@ class AwxV2
     {
         return new Job($this->adapter, $this->url);
     }
-
+    
     /**
-     * @return Key
+     * @return me
      */
-    public function key()
+    public function me()
     {
-        return new Key($this->adapter, $this->url);
+        return new Me($this->adapter, $this->url);
     }
-
+    
     /**
-     * @return LoadBalancer
+     * @return setting
      */
-    public function loadBalancer()
+    public function setting()
     {
-        return new LoadBalancer($this->adapter, $this->url);
-    }
-
-    /**
-     * @return RateLimit
-     */
-    public function rateLimit()
-    {
-        return new RateLimit($this->adapter, $this->url);
-    }
-
-    /**
-     * @return Region
-     */
-    public function region()
-    {
-        return new Region($this->adapter, $this->url);
-    }
-
-    /**
-     * @return Size
-     */
-    public function size()
-    {
-        return new Size($this->adapter, $this->url);
+        return new Setting($this->adapter, $this->url);
     }
     
     /**
@@ -173,21 +90,5 @@ class AwxV2
     public function user()
     {
         return new User($this->adapter, $this->url);
-    }
-
-    /**
-     * @return Volume
-     */
-    public function volume()
-    {
-        return new Volume($this->adapter, $this->url);
-    }
-
-    /**
-     * @return Snapshot
-     */
-    public function snapshot()
-    {
-        return new Snapshot($this->adapter, $this->url);
     }
 }
