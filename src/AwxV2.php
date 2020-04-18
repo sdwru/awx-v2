@@ -15,6 +15,7 @@ use AwxV2\Adapter\AdapterInterface;
 use AwxV2\Api\Credential;
 use AwxV2\Api\Config;
 use AwxV2\Api\Job;
+use AwxV2\Api\JobTemplate;
 use AwxV2\Api\Me;
 use AwxV2\Api\Organization;
 use AwxV2\Api\Setting;
@@ -67,6 +68,14 @@ class AwxV2
     public function job()
     {
         return new Job($this->adapter, $this->url);
+    }
+    
+    /**
+     * @return Job
+     */
+    public function jobTemplate()
+    {
+        return new JobTemplate($this->adapter, $this->url);
     }
     
     /**
