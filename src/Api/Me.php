@@ -26,30 +26,12 @@ class Me extends AbstractApi
      *
      * @return MeEntity[]
      */
-    public function getAll($per_page = 200, $page = 1)
+    public function get()
     {
-        $vars = $this->adapter->get(sprintf('%s/me/?page_size=%d&page=%d', $this->endpoint, $per_page, $page));
+        $vars = $this->adapter->get(sprintf('%s/me/', $this->endpoint));
 
         $vars = json_decode($vars);
 
-        return array_map(function ($var) {
-            return new MeEntity($var);
-        }, $vars->results);
-    }
-
-    /**
-     * @param int $id
-     *
-     * @throws HttpException
-     *
-     * @return MeEntity
-     */
-    public function getById($id)
-    {
-        $var = $this->adapter->get(sprintf('%s/me/%s/', $this->endpoint, $id));
-
-        $var = json_decode($var);
-
-        return new MeEntity($var);
+        return new MeEntity($vars);
     }
 }
