@@ -33,7 +33,7 @@ class Me extends AbstractApi
         $vars = json_decode($vars);
 
         return array_map(function ($var) {
-            return new JobEntity($var);
+            return new MeEntity($var);
         }, $vars->results);
     }
 }
