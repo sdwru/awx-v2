@@ -36,4 +36,15 @@ final class User extends AbstractEntity
      * @var object
      */
     public $related;
+    
+    /**
+     * @var string
+     */
+    public $username;
+    
+    /**
+     * @var string
+     */
+    public $created;
+    
 }
