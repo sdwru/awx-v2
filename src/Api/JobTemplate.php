@@ -33,7 +33,7 @@ class JobTemplate extends AbstractApi
         $vars = json_decode($vars);
 
         return array_map(function ($var) {
-            return new JobTemplatesEntity($var);
+            return new JobTemplateEntity($var);
         }, $vars->results);
     }
     
@@ -48,6 +48,6 @@ class JobTemplate extends AbstractApi
 
         $var = json_decode($var);
 
-        return new JobTemplatesEntity($var);
+        return new JobTemplateEntity($var);
     }
 }
