@@ -11,7 +11,7 @@
 
 namespace AwxV2\Api;
 
-use Awx\Entity\Config as AccountEntity;
+use AwxV2\Entity\Config as AccountEntity;
 
 /**
  * 
