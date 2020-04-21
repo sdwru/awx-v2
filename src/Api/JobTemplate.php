@@ -60,6 +60,6 @@ class JobTemplate extends AbstractApi
     {
         $response = $this->adapter->post(sprintf('%s/job_templates/%d/launch/', $this->endpoint), $id);
         $response = json_decode($response);
-        return new JobTemplateEntity($response)
+        return new JobTemplateEntity($response);
     }
 }
