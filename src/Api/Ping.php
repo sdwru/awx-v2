@@ -11,7 +11,7 @@
 
 namespace AwxV2\Api;
 
-use Awx\Entity\Ping as PingEntity;
+use AwxV2\Entity\Ping as PingEntity;
 
 /**
  * 
