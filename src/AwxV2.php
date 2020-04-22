@@ -19,6 +19,7 @@ use AwxV2\Api\JobTemplate;
 use AwxV2\Api\Me;
 use AwxV2\Api\Organization;
 use AwxV2\Api\Ping;
+use AwxV2\Api\Project;
 use AwxV2\Api\Setting;
 use AwxV2\Api\User;
 
@@ -101,6 +102,14 @@ class AwxV2
     public function ping()
     {
         return new Ping($this->adapter, $this->url);
+    }
+    
+    /**
+     * @return project
+     */
+    public function project()
+    {
+        return new Project($this->adapter, $this->url);
     }
     
     /**
