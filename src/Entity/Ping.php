@@ -29,12 +29,12 @@ final class Ping extends AbstractEntity
     /**
      * @var string
      */
-    public $active_node;
+    public $activeNode;
 
     /**
      * @var string
      */
-    public $install_uuid;
+    public $installUuid;
 
     /**
      * @var array
@@ -44,5 +44,5 @@ final class Ping extends AbstractEntity
     /**
      * @var array
      */
-    public $instance_groups;
+    public $instanceGroups;
 }
