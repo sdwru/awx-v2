@@ -15,7 +15,7 @@ namespace AwxV2\Entity;
  *
  *
  */
-final class ProjectEntity extends AbstractEntity
+final class Project extends AbstractEntity
 {
     /**
      * @var int
