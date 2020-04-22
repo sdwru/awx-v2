@@ -45,10 +45,10 @@ final class ProjectEntity extends AbstractEntity
     /**
      * @var string
      */
-    public $playbook;
+    public $created;
     
     /**
      * @var string
      */
-    public $job_type;
+    public $scmUrl;
 }
