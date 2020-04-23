@@ -41,4 +41,14 @@ final class Job extends AbstractEntity
      * @var string
      */
     public $name;
+    
+    /**
+     * @var string
+     */
+    public $status;
+    
+    /**
+     * @var bool
+     */
+    public $failed;
 }
