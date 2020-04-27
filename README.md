@@ -1,6 +1,6 @@
 ## WORK IN PROGRESS
 
-Do not use other than for testing.
+I am adding things as I need them so not all API features are implemented.  It should be relatively easy to look through the code and add anything that is not there yet.
 
 #### Ansible Tower / AWX API V2
 
