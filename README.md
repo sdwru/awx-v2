@@ -98,10 +98,10 @@ Account
 ```php
 // ...
 // return the account api
-$account = $digitalocean->account();
+$account = $awx->account();
 
 // return the Account entity
-$userInformation = $account->getUserInformation();
+$userInformation = $awx->getUserInformation();
 ````
 
 Action
@@ -110,7 +110,7 @@ Action
 ```php
 // ..
 // return the action api
-$action  = $digitalocean->action();
+$action  = $awx->action();
 
 // return a collection of Action entity
 $actions = $action->getAll();
@@ -125,7 +125,7 @@ Domain
 ```php
 // ..
 // return the domain api
-$domain = $digitalocean->domain();
+$domain = $awx->domain();
 
 // return a collection of Domain entity
 $domains = $domain->getAll();
@@ -147,7 +147,7 @@ Domain Record
 ```php
 // ..
 // return the domain record api
-$domainRecord = $digitalocean->domainRecord();
+$domainRecord = $awx->domainRecord();
 
 // return a collection of DomainRecord entity of the domain 'foo.dk'
 $domainRecords = $domainRecord->getAll('foo.dk');
@@ -171,7 +171,7 @@ Droplet
 ```php
 // ..
 // return the droplet api
-$droplet = $digitalocean->droplet();
+$droplet = $awx->droplet();
 
 // return a collection of Droplet entity
 $droplets = $droplet->getAll();
@@ -264,7 +264,7 @@ Image
 ```php
 // ..
 // return the image api
-$image = $digitalocean->image();
+$image = $awx->image();
 
 // return a collection of Image entity
 $images = $image->getAll();
@@ -306,7 +306,7 @@ Key
 ```php
 // ..
 // return the key api
-$key = $digitalocean->key();
+$key = $awx->key();
 
 // return a collection of Key entity
 $keys = $key->getAll();
@@ -333,7 +333,7 @@ Load Balancer
 ```php
 // ..
 // return the load balancer api
-$loadBalancer = $digitalocean->loadbalancer();
+$loadBalancer = $awx->loadbalancer();
 
 //returns a collection of Load Balancer entities
 $loadBalancers = $loadBalancer->getAll();
