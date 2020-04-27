@@ -32,7 +32,7 @@ To use the bindings, use Composer's autoload:
 require_once('vendor/autoload.php');
 ```
 
-You then need to install guzzle:
+This package should install guzzle automatically but if not install as follows:
 ```bash
 $ php composer.phar require guzzlehttp/guzzle:^6.3
 ```
