@@ -41,7 +41,7 @@ This package should install guzzle automatically but if not install as follows:
 $ php composer.phar require guzzlehttp/guzzle:^6.3
 ```
 
-And then add **one** of the following:
+And then add the following:
 
 ```json
 {
