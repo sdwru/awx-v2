@@ -12,7 +12,11 @@ I am adding things as I need them for my project so not all API features are imp
 Installation
 ------------
 
-If installing on Laravel use the install instructions at https://github.com/sdwru/Laravel-AwxV2. This library depends on oauth2-awx for obtaining tokens.  That package is based on a separate project and uses it's own instance of guzzlehttp independent of what this package does for the http client.
+If installing on Laravel use the install instructions at https://github.com/sdwru/Laravel-AwxV2. 
+
+This library depends on oauth2-awx for obtaining tokens.  That package is based on a separate project and uses it's own guzzlehttp object independent of what this package does for the http client.  
+
+Perhaps I will eventually decide to combine the two packages if it makes more sense.  For now, I don't see any reason why they cannot remain separate packages.  That will also make it easier to pull in updates from the respective upstream projects.
 
 You can install the bindings via Composer. If installing standalone to some generic php framework add the following to your composer.json
 ```
@@ -50,7 +54,7 @@ And then add **one** of the following:
 
 This library relies on the [AWX oauth2 client](https://github.com/sdwru/oauth2-awx) for obtaining tokens.
 
-Ansible AWX uses Oauth 2 for generating access tokens.  This library assumes a high level of trust between your PHP application and AWX and therefore uses [password grant type](https://oauth.net/2/grant-types/password/) for creating the initial bearer token and refresh token.  Although this is not ideal, it is the only appropriate type for full time backend api integration currently provided by Ansible Tower / AWX.  If the developers of Ansible Tower / AWX decide to add [client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) that would then be more suitable.
+Ansible AWX uses Oauth 2 for generating access tokens.  This library assumes a high level of trust between your PHP application and AWX and therefore uses [password grant type](https://oauth.net/2/grant-types/password/) for creating the initial bearer token and refresh token.  Although this is not ideal, it is the only appropriate type for full time backend api integration currently provided by Ansible Tower / AWX.  If the developers of Ansible Tower / AWX server decide to add [client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) that would then be more suitable.  The AWX oauth2 client already includes support for client-credentials.
 
 Using password grant requires that AWX be configured with an AWX user consisting of a username and password.  Once the API user is created in the AWX GUI logged in as admistrator, go to Applications and create a new application with password grant type.  When that is created it will provide a client ID and client secret.  Save a record of client secret as it is only shown once and cannot be retrieved ever again.
 
