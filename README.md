@@ -46,7 +46,7 @@ And then add **one** of the following:
 ```json
 {
     "require": {
-        "guzzlehttp/guzzle": "^6.0"
+        "guzzlehttp/guzzle": "^6.3"
     }
 }
 ```
