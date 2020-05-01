@@ -1,6 +1,6 @@
 ### WORK IN PROGRESS
 
-I am adding things as I need them so not all API features are implemented.  It should be relatively easy to look through the code and add anything that is not there yet.
+I am adding things as I need them for my project so not all API features are implemented.  It should be relatively easy to look through the code and add anything that is not there based on your needs.  I don't intent to make this a feature complete library.  For what I am doing, I plan to do almost all writes, updates, additions, deletions etc. from the AWX GUI.  I will be using the API mostly for displaying lists and configurations and triggering jobs.
 
 #### Ansible Tower / AWX API V2
 
