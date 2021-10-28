@@ -31,7 +31,7 @@ class GuzzleHttpAdapter implements AdapterInterface
      */
     public function __construct($token, $verify = true, ClientInterface $client = null)
     {
-        if (version_compare(ClientInterface::VERSION, '6') === 1) {
+        if (version_compare(ClientInterface::VERSION, '6', '>=')) {
             $this->client = $client ?: new Client([
                 'headers' => ['Authorization' => sprintf('Bearer %s', $token)],
                 'verify' => $verify

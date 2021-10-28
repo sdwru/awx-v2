@@ -47,7 +47,7 @@ class JobTemplate extends AbstractApi
         $var = $this->adapter->get(sprintf('%s/job_templates/%d/', $this->endpoint, $id));
 
         $var = json_decode($var);
-
+        
         return new JobTemplateEntity($var);
     }
     
@@ -56,10 +56,11 @@ class JobTemplate extends AbstractApi
      *
      * @return JobTemplateEntity
      */
-    public function launch($id)
+    public function launch($id, $body = [])
     {
-        $response = $this->adapter->post(sprintf('%s/job_templates/%d/launch/', $this->endpoint, $id));
+        $response = $this->adapter->post(sprintf('%s/job_templates/%d/launch/', $this->endpoint, $id), $body);
         $response = json_decode($response);
+        
         return new JobTemplateEntity($response);
     }
 }
