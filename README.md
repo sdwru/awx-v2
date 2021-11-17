@@ -39,6 +39,7 @@ require_once('vendor/autoload.php');
 This package should install guzzle automatically but if not install as follows:
 ```bash
 $ php composer.phar require guzzlehttp/guzzle:^6.3
+$ php composer.phar require guzzlehttp/guzzle:^7
 ```
 
 And then add the following:
@@ -124,12 +125,12 @@ $JobTemplate123 = $jobTemplate->getById(123);
 Contributing
 ------------
 
-Please see [CONTRIBUTING](https://github.com/toin0u/AwxV2/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/sdwru/awx-v2/blob/master/CONTRIBUTING.md) for details.
 
 Changelog
 ---------
 
-Please see [CHANGELOG](https://github.com/toin0u/AwxV2/blob/master/CHANGELOG.md) for details.
+Please see [CHANGELOG](https://github.com/sdwru/awx-v2/blob/master/CHANGELOG.md) for details.
 
 Credits
 -------
@@ -140,12 +141,12 @@ Credits
 * [Liverbool](https://github.com/liverbool)
 * [Marcos Sigueros](https://github.com/alrik11es)
 * [Chris Fidao](https://github.com/fideloper)
-* [All contributors](https://github.com/toin0u/AwxV2/contributors)
+* [All contributors](https://github.com/sdwru/awx-v2/contributors)
 
 Support
 -------
 
-[Please open an issue in github](https://github.com/toin0u/AwxV2/issues)
+[Please open an issue in github](https://github.com/sdwru/awx-v2/issues)
 
 Contributor Code of Conduct
 ---------------------------
@@ -180,4 +181,4 @@ License
 -------
 
 AwxV2 is released under the MIT License. See the bundled
-[LICENSE](https://github.com/toin0u/AwxV2/blob/master/LICENSE) file for details.
+[LICENSE](https://github.com/sdwru/awx-v2/blob/master/LICENSE) file for details.

@@ -25,13 +25,13 @@
 
     "require-dev": {
         "kriswallsmith/buzz": "^0.16",
-        "guzzlehttp/guzzle": "^5.3|^6.3",
+        "guzzlehttp/guzzle": "^5.3|^6.3|^7",
         "phpspec/phpspec": "^2.5"
     },
 
     "suggest": {
         "kriswallsmith/buzz": "To use BuzzAdapter, require kriswallsmith/buzz:^0.16.",
-        "guzzlehttp/guzzle" : "To use GuzzleHttpAdapter, require guzzlehttp/guzzle:^5.3|^6.3."
+        "guzzlehttp/guzzle" : "To use GuzzleHttpAdapter, require guzzlehttp/guzzle:^5.3|^6.3|^7."
     },
 
     "autoload": {
